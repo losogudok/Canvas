@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<style>
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		</style>
+	</head> 
+	<body> 
+		<canvas width="500" height="500" id="canvas"></canvas> 
+		<script>
+			var x = 0; 
+			function drawIt() { 
+			    requestAnimFrame(drawIt); 
+			    var canvas = document.getElementById('canvas'); 
+			    var c = canvas.getContext('2d'); 
+			    c.clearRect(0,0,canvas.width,canvas.height); 
+			    c.fillStyle = "red"; 
+			    c.fillRect(x,100,200,100); 
+			    x+=5; 
+			} 
+			requestAnimFrame(drawIt); 
+		</script>
+	</body> 
+</html> 
